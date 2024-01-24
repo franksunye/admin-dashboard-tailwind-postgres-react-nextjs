@@ -34,3 +34,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+.VSCodeCounter/2024-01-24_13-17-55/details.md
+.VSCodeCounter/2024-01-24_13-17-55/diff-details.md
+.VSCodeCounter/2024-01-24_13-17-55/diff.csv
+.VSCodeCounter/2024-01-24_13-17-55/diff.md
+.VSCodeCounter/2024-01-24_13-17-55/diff.txt
+.VSCodeCounter/2024-01-24_13-17-55/results.csv
+.VSCodeCounter/2024-01-24_13-17-55/results.json
+.VSCodeCounter/2024-01-24_13-17-55/results.md
+.VSCodeCounter/2024-01-24_13-17-55/results.txt
