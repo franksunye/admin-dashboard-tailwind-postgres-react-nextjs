@@ -6,9 +6,9 @@ import Toast from './toast';
 import { Suspense } from 'react';
 
 export const metadata = {
-  title: 'Next.js App Router + NextAuth + Tailwind CSS',
+  title: 'GPTs for Leads',
   description:
-    'A user admin dashboard configured with Next.js, Postgres, NextAuth, Tailwind CSS, TypeScript, ESLint, and Prettier.'
+    'A tool for using AI to boost lead generation by unifying and syncing the leads captured easily from GPTs conversations, to help you turn those chat interactions into sales ready leads.'
 };
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
         </Suspense>
         {children}
         <Analytics />
-        {/* <Toast /> */}
+        <Toast />
       </body>
     </html>
   );
