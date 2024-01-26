@@ -27,14 +27,30 @@ export default async function IndexPage({
 
   return (
     <main className="p-4 md:p-10 mx-auto max-w-full items-center">
-      <h1 className="text-4xl text-center mb-4 font-bold">GPTs for Leads</h1>
-      <div className="container mx-auto px-4 max-w-lg">
-        <p className="text-lg text-center">
-          A tool for using AI to boost lead generation by unifying and syncing
-          the leads captured easily from GPTs conversations, to help you turn
-          those chat interactions into sales ready leads.
-        </p>
+      <div className="flex justify-between items-center w-full h-full">
+        {' '}
+        {/* 增加 min-h-screen */}
+        <div className="flex flex-col justify-start items-center w-1/2">
+          {' '}
+          {/* 确保这里有 h-full */}
+          <h1 className="text-4xl text-center mb-4 font-bold">
+            GPTs for Leads
+          </h1>
+          <p className="text-lg text-center">
+            A tool for using AI to boost lead generation by unifying and syncing
+            the leads captured easily from GPTs conversations, to help you turn
+            those chat interactions into sales ready leads.
+          </p>
+        </div>
+        <div className="w-1/2">
+          <iframe
+            src="./CodeDisplay.html"
+            className="w-full"
+            style={{ height: '300px' }}
+          ></iframe>
+        </div>
       </div>
+
       {/* <Title>Users</Title> */}
       <div className="flex flex-col items-center w-full">
         <Text className="mt-6">
