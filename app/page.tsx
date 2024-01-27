@@ -1,13 +1,24 @@
 import { sql } from '@vercel/postgres';
 import { Card, Title, Text } from '@tremor/react';
 import Search from './search';
-import UsersTable from './table';
+// import UsersTable from './table';
+import InquiriesTable from './InquiriesTable'; // 引入新的InquiriesTable组件
 
-interface User {
+// interface User {
+//   id: number;
+//   name: string;
+//   username: string;
+//   email: string;
+// }
+
+interface Inquiry {
   id: number;
   name: string;
-  username: string;
-  email: string;
+  contact: string;
+  address: string;
+  repair_part: string;
+  leak_reason: string;
+  expected_visit_time: string;
 }
 
 export default async function IndexPage({
@@ -17,13 +28,14 @@ export default async function IndexPage({
 }) {
   const search = searchParams.q ?? '';
   const query = sql`
-  SELECT id, name, username, email 
-  FROM users 
+  SELECT id, name, contact, address, repair_part, leak_reason, expected_visit_time 
+  FROM Inquiries 
   WHERE name ILIKE ${'%' + search + '%'};
  `;
 
   const result = await query;
-  const users = result.rows as User[];
+  // const users = result.rows as User[];
+  const inquiries = result.rows as Inquiry[];
 
   return (
     <main className="p-4 md:p-10 mx-auto max-w-full items-center">
@@ -63,7 +75,8 @@ export default async function IndexPage({
         </div>
       </div>
       <Card className="mt-6">
-        <UsersTable users={users} />
+        {/* <UsersTable users={users} /> */}
+        <InquiriesTable inquiries={inquiries} />
       </Card>
     </main>
   );
